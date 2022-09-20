@@ -1,0 +1,45 @@
+body{
+    background-color: white;
+}
+.header {
+    height: 670px;
+    max-width: 100%;
+    width: auto;
+    padding-top:70px;
+    background-image: url(/assets/image/1.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 100%;
+    
+}
+.header{
+    color: #fff;
+}
+
+.judul{
+    margin-top: 200px;
+}
+
+.navbar{
+        position: fixed;
+        height: 50px;
+        width: 100%;
+}
+
+.bg{
+    height: 670px;
+    width: auto;
+    padding-top: 80px;
+    background-image: url(/assets/paket/5.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 100%;
+}
+
+.ws{
+    height: 400px;
+        width: auto;
+        padding-top:1px;
+        background-image: url(/assets/Wisata/1.jpg);
+        background-size: cover;
+}
