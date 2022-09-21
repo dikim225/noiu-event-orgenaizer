@@ -25,7 +25,9 @@ body{
         height: 50px;
         width: 100%;
 }
-
+.navbar{
+    font-family: DM Serif Display;
+}
 .bg{
     height: 670px;
     width: auto;
@@ -36,6 +38,16 @@ body{
     background-position: center 100%;
 }
 
+.AT{
+    height: 500px;
+    width: auto;
+    padding-top: 1px;
+    background-image: url(/assets/Artikel/1.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 100%;
+    font-size:xx-large;
+}
 .ws{
     height: 400px;
         width: auto;
