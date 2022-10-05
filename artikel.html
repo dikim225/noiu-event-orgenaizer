@@ -4,90 +4,100 @@
         <link rel="stylesheet"
             href="/assets/libraries/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="/assets/style/style.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
-            href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap"
+            href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Montserrat&family=Pacifico&display=swap"
             rel="stylesheet">
-        <script src="/assets/libraries/bootstrap/js/bootstrap.bundle.min.js"></script>
+                           
+         <script src="/assets/libraries/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="/main.js"></script>
         <title>Artikel</title>
     </head>
     <body>
         <!-- start navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow"
-            style="z-index: 999;">
-            <div class="container-fluid">
-                        <a class="navbar-brand page-scroll" href="/home.html"><img
-                                src="/assets/image/logo noiu.png"
-                                alt="Bootstrap"
-                                width="90" height="40"></a>
-                        <button class="navbar-toggler" type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent"
-                            aria-controls="navbarSupportedContent"
-                            aria-expanded="false"
-                            aria-label="Toggle navigation">menu
-                            <span class="navbar-toggler-icon"></span> 
-                        </button>
-                        <div class="collapse navbar-collapse"
-                            id="navbarSupportedContent">
-                            <ul class="navbar-nav ms-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link active page-scroll"
-                                        aria-current="page"
-                                        href="/home.html"> <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="35" height="20"
-                                            style="margin-bottom:5;"
-                                            fill="currentColor" class="bi
-                                            bi-house-door" viewBox="0 0 16 16">
-                                            <path d="M8.354 1.146a.5.5 0 0
-                                                0-.708
-                                                0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5
-                                                0 0
-                                                0 .5.5h4.5a.5.5 0 0 0
-                                                .5-.5v-4h2v4a.5.5 0 0 0
-                                                .5.5H14a.5.5
-                                                0 0 0 .5-.5v-7a.5.5 0 0
-                                                0-.146-.354L13 5.793V2.5a.5.5 0
-                                                0
-                                                0-.5-.5h-1a.5.5 0 0
-                                                0-.5.5v1.293L8.354 1.146zM2.5
-                                                14V7.707l5.5-5.5 5.5
-                                                5.5V14H10v-4a.5.5 0 0
-                                                0-.5-.5h-3a.5.5 0 0
-                                                0-.5.5v4H2.5z"/>
-                                            </svg>Home</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link active page-scroll"
-                                            href="/paket.html">Paket
-                                            Outbound & Gathering</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link active page-scroll"
-                                            href="/wisata.html">Paket
-                                            Wisata Indonesia</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link active page-scroll"
-                                            href="/artikel.html">Artikel</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-            <!-- end navbar -->
-
-            <!-- start header -->
-            <div class=" header AT fw-bold" id="AT">
-                <div class="text-center">
-                    <img src="" class="logo ">
-                    <h1 class="test judul text-dark">ARTIKEL</h1>
-                    <p class="test text-dark">NOIU EVENT ORGENAIZER</p>
-                </div>
+        <!-- <nav>
+            <div class="logo ">
+                <p class="h4">noiu</p>
             </div>
-            <!-- end header -->
-        </body>
-    </html>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">paket Outbound</a></li>
+                <li><a href="">wisata</a></li>
+                <li><a href="">artikel</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <input type="checkbox"/>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav> -->
+        <!-- end navbar -->
+        <div id="mainNavigation">
+  <nav role="navigation">
+    <div class="py-3 text-center border-bottom">
+      <img src="/assets/image/logo noiu 2 (1).png" alt="" class="invert" width="150px">
+    </div>
+  </nav>
+  <div class="navbar-expand-md">
+    <div class="navbar-dark text-center my-2">
+      <button class="navbar-toggler w-75" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span> <span class="align-middle">Menu</span>
+      </button>
+    </div>
+    <div class="text-center mt-3 collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav mx-auto ">
+        <li class="nav-item">
+          <a class="nav-link active" style="color:#dfdfdf ;" aria-current="page" href="/home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/paket.html">Paket Outbound & Gethering</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/wisata.html">Paket wisata </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/wisata.html">Artikel</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+  
+  
+
+        <section class="home">
+        </section>
+        <div style="height: 1000px">
+            <!-- just to make scrolling effect possible -->
+            <h2 class="myH2">What is this ?</h2>
+            <p class="myP">This is a responsive fixed navbar animated on scroll</p>
+            <p class="myP">I took inspiration from ABDO STEIF (<a
+                    href="https://codepen.io/abdosteif/pen/bRoyMb?editors=1100">https://codepen.io/abdosteif/pen/bRoyMb?editors=1100</a>)
+                and Dicson <a href="https://codepen.io/dicson/pen/waKPgQ">(https://codepen.io/dicson/pen/waKPgQ)</a></p>
+            <p class="myP">I HOPE YOU FIND THIS USEFULL</p>
+            <p class="myP">Albi</p>
+            <p class="myP"> </p>
+        </div>
+
+        <!-- Jquery needed -->
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="js/scripts.js"></script>
+
+        <!-- Function used to shrink nav bar removing paddings and adding black background -->
+        <script>
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+    </script>
+        <!-- start header -->
+
+        <!-- end header -->
+
+    </body>
+</html>
