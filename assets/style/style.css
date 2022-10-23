@@ -15,7 +15,7 @@
 .home {
   height:750px;
     margin-bottom: 60px;
-  background-image: url(/assets/image/1.JPG);
+  background-image: url(./../image/1.JPG);
   background-position: center 100%;
   background-size: cover;
   
@@ -24,7 +24,7 @@
 .home1 {
   height: 400px;
     margin-bottom: 60px;
-  background-image: url(/assets/Wisata/1.jpg);
+  background-image: url(./../Wisata/1.jpg);
   background-position: center 100%;
   background-size: cover;
   
@@ -32,7 +32,7 @@
 .home2 {
   height: 750px;
     margin-bottom: 60px;
-  background-image: url(/assets/paket/5.JPG);
+  background-image: url(./../paket/5.JPG);
   background-position: center 100%;
   background-size: cover;
   
@@ -41,7 +41,7 @@
 .home3 {
 height: 750px;
   margin-bottom: 60px;
-  background-image: url(/assets/Artikel/artikell.jpg);
+  background-image: url(./../Artikel/artikell.jpg);
   background-position: center 100%;
   background-size: cover;
 }
@@ -51,17 +51,11 @@ height: 750px;
 }
 
 #neubar {
-  background: linear-gradient(145deg, rgb(255, 0, 0),#6225E6);
+  background: white;
   box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.4)
 }
 
-.nav-item .active {
-  font-family: Georgia, Serif;
-  border-radius: 6px;
-  background: linear-gradient(145deg,#030303, #cc1e1e);
-  box-shadow: 4px 4px 8px #000000,
-    -4px -4px 8px #b6b6b6;
-}
+
 
 #neubar .nav-item {
   margin: auto 4px;
@@ -113,6 +107,7 @@ a.navbar-brand {
 }
 
 .cta:hover {
+  color: white;
   transition: 0.5s;
   box-shadow: 10px 10px 0 #FBC638;
 }
