@@ -10,7 +10,29 @@
     <script src="assets/libraries/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="main.js"></script>
 
-    <title>Paket Outbound & Gethering</title>
+    <title>Buku tamu</title>
+    <style>
+    form {
+        width: 600px;
+        padding: 20px;
+    }
+
+    form div {
+        margin: 10px;
+    }
+
+    label {
+        display: block;
+    }
+
+    input {
+        border: 1px solid black;
+    }
+
+    textarea {
+        border: 1px solid black;
+    }
+    </style>
 </head>
 
 <body>
@@ -19,7 +41,7 @@
     <!-- start navbar -->
     <nav class="navbar navbar-expand-lg navbar-white fixed-top" id="neubar">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/noiu/home.html"><img src="assets/image/noiu.png" height="60" /></a>
+            <a class="navbar-brand" href="home.html"><img src="assets/image/noiu.png" height="60" /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -28,26 +50,24 @@
             <div class=" collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto ">
                     <li class="nav-item">
-                        <a class="nav-link mx-2 active" aria-current="page" href="/noiu/home.html">Home</a>
+                        <a class="nav-link mx-2 active" aria-current="page" href="home.html">Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link mx-2 dropdown-toggle" href="/noiu/paket.html" id="navbarDropdownMenuLink"
+                        <a class="nav-link mx-2 dropdown-toggle" href="paket.html" id="navbarDropdownMenuLink"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">Paket
                             Outbound & Gethering</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="/noiu/paket.html">Outbound</a></li>
-                            <li><a class="dropdown-item" href="/noiu/gethering.html">Gethering</a></li>
+                            <li><a class="dropdown-item" href="paket.html">Outbound</a></li>
+                            <li><a class="dropdown-item" href="gethering.html">Gethering</a></li>
+                            <li><a class="dropdown-item" href="wisata.html">Outbound Sumedang</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-2" href="/noiu/wisata.html">Outbound
-                            Sumedang</a>
+                    <li class="nav-item ">
+                        <a class="nav-link mx-2" href="artikel.html">Artikel</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link mx-2" href="/noiu/artikel.html">Artikel</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link mx-2" href="/noiu/Bukutamu.php">Buku tamu</a>
+                        <a class="nav-link mx-2" href="Bukutamu.php">Buku
+                            tamu</a>
                     </li>
 
                 </ul>
@@ -66,42 +86,48 @@
         $action_from = 'fungsi_insert.php';
     }
     ?>
-    <form action="fungsi_insert.php " method="POST">
-        <h1 style="margin-top: 150px;" class="text-dark">Buku Tamu <small><a href="Bukutamu.php">Tambah Buku
-                    tamu</a></small></h1>
-        <hr>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>
-                        Nama lengkap
-                        <br>
-                        <input type="text" name="nama_lengkap" id="nama_lengkap"
+    <h1 style="margin-top: 150px; font-family: Georgia, Serif;" class="text-dark">Buku Tamu </h1>
+    <hr>
+    <div class="container">
+        <div class="row ">
+            <div class="col-lg-12 ">
+                <form action=" fungsi_insert.php " method=" POST" autocomplete="off">
+                    <div>
+                        <label class="form-label">
+                            Nama lengkap</label>
+                        <input class="form-control" type="text" name="nama_lengkap" id="nama_lengkap"
                             value="<?php echo (@$_GET['edit'] == 1) ? $data_edit['nama_lengkap'] : ''; ?>">
-                        <input type="hidden" name="id_bukutamu" value="<?php echo $_GET['id_bukutamu']; ?>">
-                    </p>
-                    <p>
-                        Email <br>
-                        <input type=" text" name="email" id="email"
+                        <input class="form-control" type="hidden" name="id_bukutamu"
+                            value="<?php echo $_GET['id_bukutamu']; ?>">
+
+                    </div>
+                    <div>
+                        <label class="form-label">
+                            Email </label>
+                        <input class="form-control" type=" text" name="email" id="email"
                             value="<?php echo (@$_GET['edit'] == 1) ? $data_edit['email'] : ''; ?>">
-                    </p>
-                    <p>
-                        Alamat <br>
-                        <textarea type="text" name="alamat" id="alamat" cols="25" rows="4"
+                    </div>
+                    <div>
+                        <label class="form-label">
+                            Alamat </label>
+                        <textarea class="form-control" type="text" name="alamat" id="alamat" cols="22" rows="1"
                             value="<?php echo ($_GET['edit'] == 1) ? $data_edit['alamat'] : ''; ?>"></textarea>
-                    </p>
-                    <p>
-                        Pasan<br>
-                        <textarea type="text" name="pesan" id="pesan" cols="25" rows="4"
+                    </div>
+                    <div>
+                        <label class="form-label">
+                            Pasan<br></label>
+                        <textarea class="form-control" type="text" name="pesan" id="pesan" cols="22" rows="1"
                             value="<?php echo ($_GET['edit'] == 1) ? $data_edit['pesan'] : ''; ?>"></textarea>
-                    </p>
-                    <button type="submit" id="submit">kirim Buku tamu</button>
-                    <button type="reset" id="reset">ulangi</button>
-                </div>
+                    </div>
+                    <div>
+                        <button type=" submit" id="submit" class="btn btn-primary">Kirim
+                            buku tamu</button>
+                        <button type=" reset" id="reset" class="btn btn-primary">ulangi</button>
+                    </div>
+                </form>
             </div>
         </div>
-    </form>
-
+    </div>
 
 
 
@@ -119,11 +145,13 @@
     </div>
     <?php } ?>
 
-    <h1 class="text-dark">From
+
+
+    <h1 class="text-dark" style="font-family: Georgia, Serif;">From
         <?php echo (@$_GET['edit'] == 1) ? 'edit' : 'input'; ?>
-        Buku Tamu</h1>
-    <hr>
-    <table border="1" cellpadding="0" cellspasing="0" width="100%">
+        Buku Tamu </h1>
+
+    <table border=" 1" cellpadding="0" cellspasing="0" width="100%">
         <tr>
             <td>No</td>
             <td>Nama lengkap</td>
@@ -151,11 +179,16 @@
         </tr>
         <?php } ?>
     </table>
-
+    <hr>
+    <h1><small><a href="Bukutamu.php">Tambah Buku
+                tamu</a></small></h1>
 
     <!-- start copy right -->
-    <div class=" text-light mt-4" style="background-color: #333;
-                padding-bottom: 30px">
+    <div class="mt-4" style="height: 20px;
+    background: linear-gradient(120deg, #ffff00 50%, #0000cc 50%)">
+    </div>
+    <div class=" text-light" style="background-color: #333;
+                ">
         <div class="container">
             <div class="row pt-4">
                 <div class="col-lg-4 pt-5 ">
@@ -405,6 +438,7 @@
         </div>
     </div>
     <!-- end copy right -->
+
 </body>
 
 </html>
