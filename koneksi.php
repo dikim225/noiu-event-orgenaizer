@@ -1,3 +1,3 @@
 <?php
 $koneksi = mysqli_connect("localhost", "root", "");
-mysqli_select_db($koneksi,"noiu");
+mysqli_select_db($koneksi, "noiu");

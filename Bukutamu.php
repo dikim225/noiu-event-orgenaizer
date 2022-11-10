@@ -91,7 +91,7 @@
     <div class="container">
         <div class="row ">
             <div class="col-lg-12 ">
-                <form action=" fungsi_insert.php " method=" POST" autocomplete="off">
+                <form action="fungsi_insert.php" method="POST" autocomplete="off">
                     <div>
                         <label class="form-label">
                             Nama lengkap</label>
@@ -104,7 +104,7 @@
                     <div>
                         <label class="form-label">
                             Email </label>
-                        <input class="form-control" type=" text" name="email" id="email"
+                        <input class="form-control" type="text" name="email" id="email"
                             value="<?php echo (@$_GET['edit'] == 1) ? $data_edit['email'] : ''; ?>">
                     </div>
                     <div>
@@ -150,35 +150,42 @@
     <h1 class="text-dark" style="font-family: Georgia, Serif;">From
         <?php echo (@$_GET['edit'] == 1) ? 'edit' : 'input'; ?>
         Buku Tamu </h1>
-
-    <table border=" 1" cellpadding="0" cellspasing="0" width="100%">
-        <tr>
-            <td>No</td>
-            <td>Nama lengkap</td>
-            <td>Email</td>
-            <td>Alamat</td>
-            <td>Pesan</td>
-            <td>Action</td>
-        </tr>
-        <?php
-        $sql_select = "SELECT * FROM bukutamu ORDER BY id_bukutamu ASC";
-        $kueri_select = mysqli_query($koneksi, $sql_select);
-        while ($data = @mysqli_fetch_array($kueri_select)) {
-        ?>
-        <tr>
-            <td><?php echo $data['id_bukutamu']; ?></td>
-            <td><?php echo $data['nama_lengkap']; ?></td>
-            <td><?php echo $data['email']; ?></td>
-            <td><?php echo $data['alamat']; ?></td>
-            <td><?php echo $data['pesan']; ?></td>
-            <td>
-                <a href="Bukutamu.php?edit=1&id_bukutamu=<?php echo $data['id_bukutamu']; ?>">Edit</a>
-                |
-                <a href="fungsi_hapus.php?id_bukutamu=<?php echo $data['id_bukutamu']; ?>">Hapus</a>
-            </td>
-        </tr>
-        <?php } ?>
-    </table>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <table border=" 1" cellpadding="5" cellspasing="0" width="100%">
+                    <tr>
+                        <td>No</td>
+                        <td>Nama lengkap</td>
+                        <td>Email</td>
+                        <td>Alamat</td>
+                        <td>Pesan</td>
+                        <td>Action</td>
+                    </tr>
+                    <?php
+                    $sql_select = "SELECT * FROM bukutamu ORDER BY id_bukutamu ASC";
+                    $kueri_select = mysqli_query($koneksi, $sql_select);
+                    $i = 0;
+                    while ($data = @mysqli_fetch_array($kueri_select)) {
+                        $i++;
+                    ?>
+                    <tr>
+                        <td><?php echo $i; ?></td>
+                        <td><?php echo $data['nama_lengkap']; ?></td>
+                        <td><?php echo $data['email']; ?></td>
+                        <td><?php echo $data['alamat']; ?></td>
+                        <td><?php echo $data['pesan']; ?></td>
+                        <td>
+                            <a href="Bukutamu.php?edit=1&id_bukutamu=<?php echo $data['id_bukutamu']; ?>">Edit</a>
+                            |
+                            <a href="fungsi_hapus.php?id_bukutamu=<?php echo $data['id_bukutamu']; ?>">Hapus</a>
+                        </td>
+                    </tr>
+                    <?php } ?>
+                </table>
+            </div>
+        </div>
+    </div>
     <hr>
     <h1><small><a href="Bukutamu.php">Tambah Buku
                 tamu</a></small></h1>

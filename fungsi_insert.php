@@ -5,13 +5,10 @@ $email = $_POST['email'];
 $alamat = $_POST['alamat'];
 $pesan = $_POST['pesan'];
 
-$sql = "INSERT INTO bukutamu (nama_lengkap,email,alamat,pesan) values ('$nama_lengkap' , '$email' , '$alamat' , '$pesan') ";
-$kueri =  mysqli_query($koneksi,$sql);
-if ($kueri) 
-{
-    header ("location:Bukutamu.php?sukses");
-}
-else 
-{
-    header ("location:Bukutamu.php?gagal");
+$sql = "INSERT INTO bukutamu (nama_lengkap,email,alamat,pesan) values ('$nama_lengkap' , '$email' , '$alamat' , '$pesan')";
+$kueri =  mysqli_query($koneksi, $sql);
+if ($kueri) {
+    header("location:Bukutamu.php?sukses");
+} else {
+    header("location:Bukutamu.php?gagal");
 }
