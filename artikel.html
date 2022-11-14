@@ -4,6 +4,8 @@
         <link rel="stylesheet"
             href="assets/libraries/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/style/style.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
         <script src="assets/js/jquery-3.6.1.min.js"></script>
         <script src="assets/libraries/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="main.js"></script>
@@ -12,7 +14,7 @@
     <body>
 
         <!-- start navbar -->
-        <nav class="navbar navbar-expand-lg navbar-white fixed-top" id="neubar">
+        <!-- <nav class="navbar navbar-expand-lg navbar-white fixed-top" id="neubar">
             <div class="container-fluid">
                 <a class="navbar-brand" href="home.html"><img
                         src="assets/image/noiu.png" height="60"
@@ -57,9 +59,35 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav> -->
         <!--end Navbar-->
+        <nav class="fixed-top shadow">
+            <a class="navbar-brand logo" href="home.html"><img
+                    src="assets/image/noiu.png" height="60" style="margin-top:
+                    10px;"
+                    /></a>
+            <label for="btn" class="icon">
+                <span class="fas fa-bars"></span>
+            </label>
+            <input type="checkbox" id="btn">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li>
+                    <label for="btn-1" class="show">Paket Outbound dan Gathering
+                        +</label>
 
+                    <a href="#">Paket Outbound dan Gathering</a>
+                    <input type="checkbox" id="btn-1">
+                    <ul>
+                        <li><a href="paket.html">Outbound</a></li>
+                        <li><a href="gethering.html">Gethering</a></li>
+                        <li><a href="wisata.html">Wisata sumedang</a></li>
+                    </ul>
+                </li>
+                <li><a href="artikel.html">Artikel</a></li>
+                <li><a href="Bukutamu.php">Buku Tamu</a></li>
+            </ul>
+        </nav>
         <section class="home3">
         </section>
         <div style="height: 1000px">
